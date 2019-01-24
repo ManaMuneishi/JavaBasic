@@ -1,4 +1,5 @@
 package practice03;
+
 /*
  * PTra03_05.java
  *   作成	LIKEIT	2017
@@ -33,6 +34,12 @@ public class PTra03_05 {
 		 * ※ ただし、入力された値が100より大きく、0未満の場合は、「不正な値が入力されました」を出力してください
 		 * ※ プログラムは何行書いても良いです
 		 */
-
+		if(num >= 75) {
+			System.out.println("雨が降る確率が高いです");
+		}else if(num < 30){
+			System.out.println("雨はまず降らないでしょう");
+		}else {
+			System.out.println("雨が振るかもしれないです");
+		}
 	}
 }

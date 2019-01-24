@@ -18,5 +18,11 @@ public class PTra03_09 {
 		 *
 		 * ※ プログラムは何行書いても良いです
 		 */
+		java.util.Scanner scanner = new java.util.Scanner(System.in);
+		int num = scanner.nextInt();
+		switch(num) {
+
+		}
+
 	}
 }
