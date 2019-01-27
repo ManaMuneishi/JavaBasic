@@ -25,5 +25,108 @@ public class PTra06_07 {
 		 * ■□□□□
 		 */
 
+		for (int i = 0; i < 5; i++) {
+
+			for (int j = 0; j < i; j++) {
+				System.out.print("■");
+			}
+			for (int w = 0; w < (5 - i); w++) {
+				System.out.print("□");
+			}
+			System.out.println("");
+		}
+
+		for (int i = 0; i < 5; i++) {
+
+			for (int w = 0; w < (5 - i); w++) {
+				System.out.print("■");
+			}
+			for (int j = 0; j < i; j++) {
+				System.out.print("□");
+			}
+
+			System.out.println("");
+		}
+
+
+
+
+
+
+
+		/*for (int i = 0; i < 10; i++) {  // 模様違い
+
+
+			for (int j = 0; j < i; j++) {
+				System.out.print("■");
+			}
+			for (int w = 0; w < (10 - i); w++) {
+				System.out.print("□");
+			}
+			for (int j = 0; j < i; j++) {
+				System.out.print("□");
+			}
+			for (int w = 0; w < (10 - i); w++) {
+				System.out.print("■");
+			}
+			System.out.println("");
+		}*/
+
+		/*for (int i = 0; i < 10; i++) {    ///模様違い
+
+			for (int j = 0; j < i/2; j++) {
+				System.out.print("■");
+			}
+			for (int w = 0; w < (5 - i/2); w++) {
+				System.out.print("□");
+			}
+			for (int j = 0; j < i/2; j++) {
+				System.out.print("□");
+			}
+			for (int w = 0; w < (5 - i/2); w++) {
+				System.out.print("■");
+			}
+			System.out.println("");
+		}*/
+
+
+
+
+		/*for (int i = 0; i < 10; i++) {    ///模様違い
+
+			for (int j = 0; j < i; j++) {
+				System.out.print("■");
+			}
+			for (int w = 0; w < (5 - i); w++) {
+				System.out.print("□");
+			}
+			for (int j = 0; j < i; j++) {
+				System.out.print("□");
+			}
+			for (int w = 0; w < (5 - i); w++) {
+				System.out.print("■");
+			}
+			System.out.println("");
+		}*/
+
+
+
+
+		/*for (int i = 0; i < 5; i++) {   ///模様違い。
+
+			for (int j = 0; j < i; j++) {
+				System.out.print("■");
+			}
+			for (int w = 0; w < (5 - i); w++) {
+				System.out.print("□");
+			}
+			for (int j = 0; j < i; j++) {
+				System.out.print("□");
+			}
+			for (int w = 0; w < (5 - i); w++) {
+				System.out.print("■");
+			}
+			System.out.println("");
+		}*/
 	}
 }
