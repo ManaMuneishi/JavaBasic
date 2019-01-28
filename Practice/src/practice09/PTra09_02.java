@@ -1,4 +1,5 @@
 package practice09;
+
 /*
  * PTra09_02.java
  *   作成	LIKEIT	2017
@@ -11,10 +12,11 @@ public class PTra09_02 {
 		String[] array = {"Plain", "Island", "Mountain", "Swamp", "Forest"};
 
 		// ★ 配列arrayを、Util内のメソッドを用いてランダムに並び替えてください
+		practice09.util.Util.shuffleArray(array);
 		// ※ Utilはインポートしても良いし、完全限定名で記述しても良いです
-
-
 		// ★ ランダムに並び替えた後の配列を前から順に全て表示してください
-
+		for (int i=0; i < array.length;i++) {
+			System.out.println(array[i]);
+		}
 	}
 }
