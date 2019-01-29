@@ -51,11 +51,8 @@ public class PTra10_05 {
 		int n = 0; // ループ回数 =目的地までの時間。
 		//初期化はループの外。ここ大事。
 		while(true) {
-
 			num += car.run();//breakするまでは走った距離になる。
-
 			n++;
-
 			if (car.gasoline < 0) {
 				System.out.println("目的地に到達できませんでした");
 				break;
