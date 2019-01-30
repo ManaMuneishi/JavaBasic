@@ -21,19 +21,22 @@ public class PTra10_06 {
 		Car [] cars = new Car [3];
 
 		Car car1 = new Car();
+		cars[0] = car1;
 		car1.serialNo = 18367;
 		car1.color = "Pink";
-		car1.gasoline = 21;
+		car1.gasoline = 41;
 
 		Car car2 = new Car();
+		cars[1] = car2;
 		car2.serialNo = 20234;
 		car2.color = "Yellow";
 		car2.gasoline = 80;
 
 		Car car3 = new Car();
+		cars[2] = car3;
 		car3.serialNo = 13084;
 		car3.color = "Blue";
-		car3.gasoline = 38;
+		car3.gasoline = 130;
 
 		// 目的地までの距離
 		final int distance = 300;
@@ -41,11 +44,6 @@ public class PTra10_06 {
 		//car達を配列にする
 
 		for (int i = 0; i < cars.length; i++) {
-			cars [i] = new Car();
-			cars[i].serialNO = Integer.parseInt(car[0]);
-			cars[i].color = car;
-			cars[i].gasoline = Integer.parseInt(car[2]);
-
 
 		int num = 0;
 		int n = 0;
