@@ -22,16 +22,14 @@ public class PTra11_03 {
 		number++;
 	}
 	
-	
 	public static void main(String[] args) {
 
 		// ★ sumメソッドを呼び出してください
 		PTra11_03 u = new PTra11_03();
-		
 		u.sum(2,3);
 	}
 
-	public void sum(int x, int y) {
+	public void sum(int x, int y) {  //staticメソッドじゃない=staticなメインメソッドには直接呼べない。
 		System.out.println("sumメソッドを呼び出しました。" + x + "＋" + y + "＝" + (x + y));
 
 		System.out.println("クラスフィールドnumber：" /* + ★ クラスフィールドnumberの出力をしてください */);
