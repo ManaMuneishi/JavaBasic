@@ -32,18 +32,24 @@ public class PTra13_04 {
 		String heroName = hero.getName();
 		String slimeName = slime.getName();
 
-		boolean i = hero.damage(hero.attack());
-		boolean k = slime.damage(slime.attack());
-
 		while(true) {
-			hero.damage(hero.attack());
-			slime.damage(slime.attack());
+			// heroのターン
+			boolean isSlimeDead = slime.damage(hero.attack());
+			if(isSlimeDead) {
+				System.out.println(heroName + "は" + slimeName + "との戦闘に勝利した");
+				break;
+			}
+
+			boolean isHeroDead = hero.damage(slime.attack());
+			if(isHeroDead) {
+				System.out.println(slimeName + "は" + heroName + "との戦闘に勝利した");
+				break;
+			}
+
 		}
 
 		// ★ 勝利した方の出力を行ってください。「○○は■■との戦闘に勝利した」
 
-		if (i == false) {
-			System.out.println(heroName + "は" + slimeName + "との戦闘に勝利した");
-		}
+
 	}
 }
