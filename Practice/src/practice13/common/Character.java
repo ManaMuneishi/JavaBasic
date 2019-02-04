@@ -31,6 +31,7 @@ public class Character {
 	 * @param defence
 	 */
 	public Character(int hp, int power, int endurance) {
+		//これは引数ありのコンストラクタ。なのでHeroクラスで勝手に実行されない。heroで引数なしのコンストラクタを作るとok
 		this.hp = hp;
 		this.power = power;
 		this.endurance = endurance;
