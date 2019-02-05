@@ -16,5 +16,18 @@ public class PTra17_04 {
 		 * ※ Thread.sleep を使用すること
 		 */
 
-	}
+		//(文字列を分割する)
+		String[] strs = str.split("");
+
+		//配列一要素ごとにsleepさせる。forで繰り返す。
+		try {
+			for(int i = 0; i < strs.length; i++) {
+				System.out.print(strs[i]);
+				Thread.sleep(1000);
+			}
+			}catch(InterruptedException e){
+				e.printStackTrace();
+			}
+		}
 }
+
