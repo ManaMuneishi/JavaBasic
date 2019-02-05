@@ -16,8 +16,13 @@ public class PTra15_02 {
 
 		// roomに格納されたJava2MonthインスタンスのgetCurriculumメソッドを呼び出してください
 
+		// (room型からJava2Month型に変える)
+		Java2Month java2Month = (Java2Month)room;
 
+		// (配列の中身を取得しつつ出力)
+		for(String curriculum : java2Month.getCurriculum()) {
+			System.out.println(curriculum);
+		}
 		// 取得したカリキュラム情報を全て出力してください
-
 	}
 }

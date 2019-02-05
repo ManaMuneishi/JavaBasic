@@ -1,6 +1,6 @@
 package practice14.common;
 
-public class DBCource{
+public class DBCource implements Course{
 	/*
 	 * ★ common.Courseを実装した、DBCourseクラスを作成してください
 	 *
@@ -13,11 +13,12 @@ public class DBCource{
 	 * 		SQL応用
 	 */
 	public String getCourseName() {
-		String courseName = "【Eラーニング】Java";
+		String courseName = "【Eラーニング】DB基礎";
 		return courseName;
 	}
 
-	String[] getCourseUnit = {"式と演算","制御構文","メソッド","配列",
-								"オブジェクト指向","継承","高度な継承"};
-
+	public String[] getCourseUnit() {
+	String[] courseUnit = {"DB基礎","SQL基礎","正規化","SQL応用"};
+		return courseUnit;
+	}
 }
