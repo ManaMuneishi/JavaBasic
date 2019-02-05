@@ -16,9 +16,17 @@ public class PTra16_03 {
 	 *	・その後、改行をして「PTra16_03#toString()の処理」という文字列を連結してください
 	 */
 
+	public String toString() {
+		 String i = super.toString() + "PTra16_03#toString()の処理"; //(superつけてObjectクラスを呼んでくる。)
+		 return i;
+	 }
+
 	public static void main(String[] args) {
 
-		// ★ PTra16_03クラスのtoStringメソッドの内容を出力してください
+		//(staticではないメソッドを使うので、まず元クラスのインスタンスを作る。)
+		PTra16_03 p = new PTra16_03();
 
+		// ★ PTra16_03クラスのtoStringメソッドの内容を出力してください
+		System.out.println(p.toString());
 	}
 }
