@@ -35,22 +35,21 @@ public class PTra17_03 {
 		 * から再度入力を求めるような形に仕様変更してください。
 		 *
 		 */
-
-
-		boolean success = false;
 		for (int i = 0; i < question.length; i++) {
+				boolean success = false; //この位置重要。forより上だとだめ。
 				System.out.println("問題：" + (i + 1));
 				System.out.println(question[i]);
 
-			while(!success) {
+			while(!success) { //notsuccess = true
 				try {
-					System.out.println("回答を数字で入力してください");
+					System.out.println("回答を数字で入力してください"); //trycatchは必要最低限のところを囲めばいい。
 					String input = ThrowExceptionUtil.inputValue();
 
 					int num = Integer.parseInt(input);
 
 					if (answer[i] == num) {
 						score++;
+						success = true;
 					}
 
 				} catch(IOException e) {
@@ -59,8 +58,8 @@ public class PTra17_03 {
 					System.out.println("数字以外が入力されました");
 				}
 			}
-
+		}
 		System.out.println("全ての問題が終わりました。");
 		System.out.println("あなたの得点は・・・" + score + "点です！");
-		}
 	}
+}
