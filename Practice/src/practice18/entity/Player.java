@@ -16,10 +16,10 @@ public class Player {
 	 * 		各フィールドの値を、カンマ区切りの文字列で取得する
 	 */
 	//フィールド
-	String position;
-	String name;
-	String country;
-	String team;
+	private String position;
+	private String name;
+	private String country;
+	private String team;
 
 	//アクセサ
 	public String getPosition() {
@@ -50,10 +50,12 @@ public class Player {
         this.team = team;
     }
 
-    //toStringオーバーライド
-    public String toString() { //オーバーライドすると、objectクラスのtoStringではなくなる=アドレス経由しないので出力楽。
+    //csvから区切った情報を取得(=文字の羅列)しているので、表示するときに見やすいよう、もう一度カンマを入れる。
+    //toStringオーバーライド(return内容を返してくれるメソッドとしても使える)
+    public String toString() {
 		 return position + "," + name + ","  + country + ","  + team;
     }
+  //オーバーライドすると、objectクラス内容のtoStringではなくなる=アドレス経由しないので出力楽。かつ他クラスの出力と表示内容揃う。
 
 
 
