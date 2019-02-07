@@ -9,10 +9,7 @@ package practice18;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Scanner;
 
 import practice18.entity.Player;
@@ -50,27 +47,44 @@ public class PTra18_04 {
 
 		// ★ ①のArrayListの中からGK1名、DF4名、MF4名, FW2名をランダムで出力してください
 
+        //それぞれグループにする
 
-
-        //GK1名を表示
-        Player player = new Player();
         ArrayList<Player> gk = new ArrayList<Player>();
         ArrayList<Player> df = new ArrayList<Player>();
         ArrayList<Player> mf = new ArrayList<Player>();
         ArrayList<Player> fw = new ArrayList<Player>();
 
+        for(int j = 0; j <array.size(); j++) {
+
+        	if (array.get(j).getPosition().contains("GK")) { //(contains はboolean)
+        	gk.add(array.get(j));
+        	}
+
+        	if (array.get(j).getPosition().contains("DF")) {
+               df.add(array.get(j));
+             }
+        	if (array.get(j).getPosition().contains("MF")) {
+                mf.add(array.get(j));
+              }
+        	if (array.get(j).getPosition().contains("FW")) {
+                fw.add(array.get(j));
+              }
         }
-	private static void add(Collection<E> collection) {
-		collection.add(get)
+            Collections.shuffle(gk); //それぞれのグループをシャッフルする
+            Collections.shuffle(df);
+            Collections.shuffle(mf);
+            Collections.shuffle(fw);
 
+            System.out.println(gk.get(0)); //gk出力1人
 
-
-
-
-        Collections.shuffle(array);
-        System.out.println(array.get(0));
-
-
-        }
+            for (int k = 0; k < 4; k++) {  //df・mfともに出力4人
+            	 System.out.println(df.get(k));
+            }
+            for (int l = 0; l < 4; l++) {  //df・mfともに出力4人
+            System.out.println(mf.get(l));
+            }
+            for (int n = 0; n < 2; n++) {//fw出力2人
+                 System.out.println(fw.get(n));
+            }
 	}
 }

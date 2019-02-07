@@ -9,7 +9,6 @@ package practice18;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Scanner;
 
 import practice18.entity.Player;
@@ -43,22 +42,28 @@ public class PTra18_03 {
         } catch (FileNotFoundException e) {
             System.out.println("ファイルが見つかりません");
         }
-		// ★ ArrayListに格納された値を全て表示してください
-		// ※ できれば拡張for文を使いましょう
-        for(Player file : array) {
-        	System.out.println(file);
-        }
+
 
 		// ★ ①のArrayListの中から"レアル・マドリード", "バルセロナ"の選手を除外してください
 
         //(イテレータで、指定したものを削除)//removeAll もしくは removeをfor文に入れて実行してもできる。
-        Iterator<Player> f = array.iterator();
-        while(f.hasNext()){
-        	Player Remove = f.next();
-        	if (Remove.getTeam().equals("レアル・マドリード")||Remove.getTeam().equals("バルセロナ")) {
-        		f.remove(); //Remove = 全部の要素。teamのところからでないと、取得できない。
+        for (int i =  array.size() -1; i >=0; i--) {
+        	String team = array.get(i).getTeam();
+        	if(team.equals("レアル・マドリード") || team.equals("バルセロナ")) {
+            	array.remove(i);
         	}
-        }
+		}
+
+
+
+
+//        Iterator<Player> f = array.iterator();
+//        while(f.hasNext()){
+//        	Player Remove = f.next();
+//        	if (Remove.getTeam().equals("レアル・マドリード")||Remove.getTeam().equals("バルセロナ")) {
+//        		f.remove(); //Remove = 全部の要素。teamのところからでないと、取得できない。
+//        	}
+//        }
         	// ★ 削除後のArrayListの中身を全件出力してください
         for(Player file : array) {
             System.out.println(file);
