@@ -45,7 +45,7 @@ public class PTra17_03 {
 					System.out.println("回答を数字で入力してください"); //trycatchは必要最低限のところを囲めばいい。
 					String input = ThrowExceptionUtil.inputValue();
 
-					int num = Integer.parseInt(input);
+					int num = Integer.parseInt(input);//型変換
 
 					if (answer[i] == num) {
 						score++;

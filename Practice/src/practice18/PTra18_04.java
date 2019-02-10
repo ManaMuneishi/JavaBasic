@@ -77,7 +77,7 @@ public class PTra18_04 {
 
             System.out.println(gk.get(0)); //gk出力1人
 
-            for (int k = 0; k < 4; k++) {  //df・mfともに出力4人
+            for (int k = 0; k < 4; k++) {  //df・mfともに出力4人。0を含むから4だ！
             	 System.out.println(df.get(k));
             }
             for (int l = 0; l < 4; l++) {  //df・mfともに出力4人
